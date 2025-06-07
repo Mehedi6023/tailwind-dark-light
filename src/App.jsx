@@ -15,7 +15,7 @@ const App = () => {
     }
   }, [darkMode]);
   return (
-    <div className="min-h-screen bg-neutral-100 relative dark:bg-neutral-950 transition-colors duration-300">
+    <div className="min-h-screen bg-neutral-100 relative dark:bg-neutral-950 transition-colors duration-300 ">
         <div className="absolute inset-0  isolate">
     {/* Light mode pattern */}
     <div className='absolute inset-0 dark:hidden' style={{

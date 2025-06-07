@@ -113,10 +113,10 @@ const Hero = () => {
                       alt="code"
                     />
                     <div className="absolute bottom-4 right-4">
-                    <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-gradient-to-r from-amber-500 to-indigo-900 flex items-center justify-center text-white shadow-lg animate-pulse">
-                      <i className="bx bx-brightness-half text-xl lg:text-2xl"></i>
+                      <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-gradient-to-r from-amber-500 to-indigo-900 flex items-center justify-center text-white shadow-lg animate-pulse">
+                        <i className="bx bx-brightness-half text-xl lg:text-2xl"></i>
+                      </div>
                     </div>
-                  </div>
                   </div>
 
                   <div className="mt-3 lg:mt-4 flex  items-center justify-between">
@@ -138,6 +138,18 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="hidden md:block absolute bottom-8 left-8 lg:bottom-10 lg:left-10 animate-bounce">
+        <div className="bg-neutral-900 text-white px-2.5 py-1.5 rounded-lg text-sm lg:text-sm flex items-center shadow-lg">
+          <i className="bx bx-check-circle mr-1 text-amber-500"></i>
+          Responsive
+        </div>
+      </div>
+      <div className="hidden md:block absolute top-15 right-35 lg:top-20 lg:right-40 animate-bounce">
+        <div className="bg-neutral-900 text-white px-2.5 py-1.5 rounded-lg text-sm lg:text-sm flex items-center shadow-lg">
+          <i className="bx bx-check-circle mr-1 text-amber-500"></i>
+          Responsive
         </div>
       </div>
     </div>
