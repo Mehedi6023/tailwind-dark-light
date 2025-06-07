@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Hero from './components/Hero';
+import { ThemeContext } from './context/ThemeContext';
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const savedTheme = localStorage.getItem('theme')
-    return savedTheme === 'dark' ? true: false
-  });
+const {isDarkMode, setIsDarkMode} = useContext(ThemeContext)
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setIsDarkMode(!isDarkMode);
   };
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light')
-    }
-  }, [darkMode]);
+
   return (
     <div className="min-h-screen bg-neutral-100 relative dark:bg-neutral-950 transition-colors duration-300 ">
         <div className="absolute inset-0  isolate">
@@ -40,7 +30,7 @@ const App = () => {
         className="fixed top-3 lg:top-4 right-3 lg:right-4 w-9 h-9 lg:w-10 lg:h-10 flex justify-center items-center rounded-full bg-amber-500 text-neutral-950 shadow-lg hover:bg-amber-600 transition-colors cursor-pointer"
       >
         <i
-          className={`bx bx-${darkMode ? 'sun' : 'moon'} text-lg lg:text-xl`}
+          className={`bx bx-${isDarkMode ? 'sun' : 'moon'} text-lg lg:text-xl`}
         ></i>
       </button>
       <Hero />
